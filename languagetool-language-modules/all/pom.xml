@@ -94,6 +94,10 @@
         </dependency>
         <dependency>
             <groupId>org.languagetool</groupId>
+            <artifactId>language-fi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.languagetool</groupId>
             <artifactId>language-fr</artifactId>
         </dependency>
         <dependency>

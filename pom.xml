@@ -35,6 +35,7 @@
         <module>languagetool-language-modules/en</module>
         <module>languagetool-language-modules/fa</module>
         <module>languagetool-language-modules/ar</module>
+        <module>languagetool-language-modules/fi</module>
         <module>languagetool-language-modules/fr</module>
         <module>languagetool-language-modules/de</module>
         <module>languagetool-language-modules/pl</module>
@@ -811,6 +812,11 @@
             <dependency>
                 <groupId>org.languagetool</groupId>
                 <artifactId>language-fa</artifactId>
+                <version>6.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.languagetool</groupId>
+                <artifactId>language-fi</artifactId>
                 <version>6.5</version>
             </dependency>
             <dependency>

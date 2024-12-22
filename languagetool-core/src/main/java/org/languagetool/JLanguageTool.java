@@ -1682,6 +1682,7 @@ public class JLanguageTool {
   public AnalyzedSentence getRawAnalyzedSentence(String sentence) throws IOException {
     List<String> tokens = language.getWordTokenizer().tokenize(sentence);
     Map<Integer, CleanToken> softHyphenTokens = replaceSoftHyphens(tokens);
+    System.out.println("...language:" + language);
 
     List<AnalyzedTokenReadings> aTokens = language.getTagger().tag(tokens);
     if (language.getChunker() != null) {

@@ -1,0 +1,26 @@
+package org.languagetool.language;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class FinnishLanguageDetectionTest {
+
+    @Test
+    public void testFinnishLanguage() {
+        Finnish finnish = new Finnish();
+        
+        // Test basic properties
+        assertEquals("Finnish", finnish.getName());
+        assertEquals("fi", finnish.getShortCode());
+        assertArrayEquals(new String[]{"FI"}, finnish.getCountries());
+        
+        // Test that tagger returns null as expected
+        assertNull(finnish.createDefaultTagger());
+        
+        // Test maintainers
+        assertTrue(finnish.getMaintainers().length > 0);
+        
+        // Test that rules are empty as expected
+        assertTrue(finnish.getPatternRules().isEmpty());
+    }
+}
