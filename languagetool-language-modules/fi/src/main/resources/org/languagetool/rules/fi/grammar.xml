@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/print.xsl"?>
 <rules lang="fi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.xsd">
-    
+
     <category id="COMPOUND_WORDS" name="Yhdyssanat">
         <!-- Rule for common compound word mistakes -->
         <rule id="KERROS_TALO" name="Compound Words: kerrostalo">
@@ -17,51 +17,11 @@
             <example>Tämä kerrostalo on korkea.</example>
         </rule>
     </category>
+   <rules>
+      <rule>
+          <class>org.languagetool.rules.fi.FinnishSpellerRule</class>
+       </rule>
+     </rules>
 
-    <category id="AGREEMENTS" name="Kongruenssi">
-        <!-- Subject-verb agreement example -->
-        <rule id="MINÄ_OLEN" name="Persoonakongruenssi">
-            <pattern>
-                <token>minä</token>
-                <token>on</token>
-            </pattern>
-            <message>Persoonamuotovirhe: "minä"-pronominin kanssa käytetään verbimuotoa "olen".</message>
-            <example correction="olen">
-                <marker>minä on</marker> väsynyt.
-            </example>
-            <example>Minä olen väsynyt.</example>
-        </rule>
-    </category>
-
-    <category id="CASE_AGREEMENT" name="Sijapäätteet">
-        <!-- Case agreement example -->
-        <rule id="TALOSSA_SISÄLLÄ" name="Sisäpaikallissijat">
-            <pattern>
-                <token>talossa</token>
-                <token>sisässä</token>
-            </pattern>
-            <message>Tuplapaikallissija: käytä vain yhtä sisäpaikallissijaa.</message>
-            <example correction="talossa|talon sisässä">
-                <marker>talossa sisässä</marker>
-            </example>
-            <example>Olen talossa.</example>
-            <example>Olen talon sisässä.</example>
-        </rule>
-    </category>
-
-    <category id="COMMON_MISTAKES" name="Yleiset virheet">
-        <!-- Common mistake with "alkaa" -->
-        <rule id="ALKAA_TEKEMÄÄN" name="Alkaa-verbin käyttö">
-            <pattern>
-                <token>alkaa</token>
-                <token postag="NFIN_MA.*" postag_regexp="yes"/>
-            </pattern>
-            <message>Alkaa-verbin kanssa käytetään 3. infinitiivin perusmuotoa (esim. "alkaa tehdä").</message>
-            <example correction="tehdä">
-                <marker>alkaa tekemään</marker>
-            </example>
-            <example>Hän alkaa tehdä läksyjä.</example>
-        </rule>
-    </category>
 
 </rules>
