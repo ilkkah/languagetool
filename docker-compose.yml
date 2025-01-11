@@ -1,0 +1,9 @@
+version: '3.9' # Adjust version as needed
+
+services:
+  languagetool:
+    image: languagetool:latest
+    container_name: languagetool
+    ports:
+      - "8010:8010" # Map port 8010 on the host to port 8010 in the container
+    restart: unless-stopped # Optional: restart policy
